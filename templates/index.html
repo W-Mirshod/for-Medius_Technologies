@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodePen - Upload Form</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+<section class="upload-file">
+    <h1 class="heading">Upload files</h1>
+    <p class="paragraph">You can upload multiple files.</p>
+    <div class="files hidden" data-files></div>
+    <form method="post" class="form" enctype="multipart/formdata">
+        {% csrf_token %}
+        <div class="dropzone" data-dropzone>
+            <div class="dropzone__field">
+                <label class="dropzone__label" for="files" data-dropzone-label>Upload files</label>
+                <input class="dropzone__file" id="files" name="file" type="file" multiple data-dropzone-file>
+            </div>
+            <button class="dropzone__upload button" name="uploadFile" type="submit">Upload files</button>
+        </div>
+        <button class="button" name="continue" type="submit">Upload Files</button>
+    </form>
+</section>
+<!-- partial -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>

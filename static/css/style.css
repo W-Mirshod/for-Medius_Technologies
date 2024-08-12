@@ -1,0 +1,130 @@
+body {
+  margin: 1rem;
+  font-family: "Arial", sans-serif;
+}
+
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0.0625rem 0.25rem #5e9ed6;
+}
+
+.hidden {
+  display: none;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden !important;
+  width: 0.0625rem !important;
+  height: 0.0625rem !important;
+  padding: 0 !important;
+  border: 0 !important;
+  margin: -0.0625rem !important;
+  clip: rect(0 0 0 0) !important;
+}
+
+.anchor {
+  border-radius: 0.125rem;
+  color: #000;
+}
+
+.button {
+  display: block;
+  padding: 0.375rem 0.75rem;
+  border: none;
+  border-radius: 0.125rem;
+  background-color: #000;
+  color: #fff;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.upload-file {
+  max-width: 736px;
+}
+
+.file {
+  padding-left: 0;
+  list-style: none;
+}
+.file__item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  margin-bottom: 0.0625rem;
+  background-color: #f0f0f0;
+}
+.file__name {
+  flex-basis: 40%;
+  overflow: hidden;
+  padding: 0.3125rem;
+  margin-right: 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.file__status {
+  flex-basis: 40%;
+  margin-right: 0.5rem;
+}
+.file__status--success {
+  color: #008000;
+}
+.file__status--error {
+  color: #800000;
+}
+.file__remove {
+  flex-basis: 20%;
+}
+
+.dropzone {
+  margin-bottom: 1rem;
+}
+.dropzone--actual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  border: 0.125rem dashed #000;
+  border-radius: 0.125rem;
+}
+.dropzone--actual .dropzone__label {
+  margin-bottom: 0;
+}
+.dropzone--actual .dropzone__label::after {
+  content: "";
+}
+.dropzone--actual .dropzone__label--focused {
+  outline: 0;
+  box-shadow: 0 0 0.0625rem 0.25rem #5e9ed6;
+}
+.dropzone--actual .dropzone__file {
+  position: absolute;
+  left: -9999em;
+}
+.dropzone--actual .dropzone__upload {
+  display: none;
+}
+.dropzone--dragover {
+  background-color: #ddd;
+}
+.dropzone__label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+.dropzone__label::after {
+  content: ":";
+}
+.dropzone__file {
+  display: block;
+  padding: 0.375rem 0.75rem;
+  border: 0.0625rem solid #000;
+  border-radius: 0.125rem;
+  font-family: inherit;
+  font-size: inherit;
+}
+.dropzone__upload {
+  margin-top: 0.5rem;
+}
