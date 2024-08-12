@@ -6,4 +6,4 @@ from app.models import UploadedFiles
 class UploadedFilesForm(ModelForm):
     class Meta:
         model = UploadedFiles
-        exclude = ['file']
+        exclude = ['file', 'email']

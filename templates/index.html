@@ -14,7 +14,7 @@
     <h1 class="heading">Upload files</h1>
     <p class="paragraph">You can upload multiple files.</p>
     <div class="files hidden" data-files></div>
-    <form method="post" class="form" enctype="multipart/formdata">
+    <form method="post" class="form" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="dropzone" data-dropzone>
             <div class="dropzone__field">
@@ -23,6 +23,11 @@
             </div>
             <button class="dropzone__upload button" name="uploadFile" type="submit">Upload files</button>
         </div>
+        <div class="email-field">
+            <label for="email">Enter your email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <br>
         <button class="button" name="continue" type="submit">Upload Files</button>
     </form>
 </section>
