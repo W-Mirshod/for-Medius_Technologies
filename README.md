@@ -8,3 +8,9 @@ main page, anyone can upload many csv or excel files along with their email to s
 
 after saving data adn done successfully, you'll get message:
 ![Screenshot 2024-08-13 081807](https://github.com/user-attachments/assets/6365f439-3043-4bb0-a03a-2e65a27a5847)
+
+pushed by my brach (Mirshod) in GitHub:
+![image](https://github.com/user-attachments/assets/92f6832f-2583-4470-a71c-9d7584f831a1)
+
+deploying with Amazon AWS and its Address:
+http://51.21.11.250:8000/
