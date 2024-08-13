@@ -2,6 +2,7 @@ import pandas as pd
 from io import StringIO
 from django.views import View
 from app.utils import send_email
+from django.contrib import messages
 from app.forms import UploadedFilesForm
 from django.shortcuts import render, redirect
 
@@ -31,11 +32,13 @@ class IndexPage(View):
                 except ValueError as e:
                     return render(request, 'index.html', {'form': form, 'error': str(e)})
 
-            subject = 'Python Assignment - Mirshod'
+            subject = f'Python Assignment - Mirshod (ID: {request.user.id})'
             body = self.format_summaries_as_html(summaries)
             send_email(subject, body, [email_address])
 
             form.save()
+
+            messages.success(request, "Done! The summary of ur files has been sent to your email.")
             return redirect('index')
         return render(request, 'index.html', {'form': form})
 
