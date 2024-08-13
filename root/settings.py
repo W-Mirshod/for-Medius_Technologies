@@ -140,15 +140,14 @@ JAZZMIN_SETTINGS = {
     'site_title': 'Online Course',
     'site_header': 'E-Platform',
     'site_brand': 'E-Courses',
-    'site_logo': 'admin.ico',
     'welcome_sign': 'Welcome to the Admin Area',
-    'copyright': 'Najot Ta\'lim',
+    'copyright': 'For Intern',
     'search_model': 'auth.User',
     'user_avatar': 'admin.ico',
 
     # Top Menu #
     'topmenu_links': [
-        {'name': 'Home', 'url': 'http://127.0.0.1:8000/courses/home/', 'permissions': ['auth.view_user']},
+        {'name': 'Home', 'url': 'http://51.21.11.250:8000/', 'permissions': ['auth.view_user']},
         {'name': 'Support', 'url': 'https://support.example.com', 'new_window': True},
     ],
 
